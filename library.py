@@ -36,8 +36,8 @@ class Library:
         if not self.books:
             return 1
         else:
-            last_book = self.books[-1]
-            return last_book.id + 1
+            max_id = max(book.id for book in self.books)
+            return max_id + 1
 
     def get_index_by_book_id(self, id_):
         """
